@@ -7,10 +7,11 @@ import requests
 import time
 from multiprocessing.pool import ThreadPool
 from save_to_db import SaveDB
+from settings import target_website
 
 
 
-def valid(proxy, method, url='https://www.baidu.com'):
+def valid(proxy, method, url=target_website):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36'
     }

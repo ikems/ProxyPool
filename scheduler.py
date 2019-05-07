@@ -1,8 +1,8 @@
 from multiprocessing import Process
 
-from crawl import crawl_run
-from validate import check_run
-from flask_api import api_run
+from .crawl import crawl_run
+from .validate import check_run
+from .flask_api import api_run
 
 
 if __name__ == '__main__':

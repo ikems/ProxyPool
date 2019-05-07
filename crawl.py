@@ -25,11 +25,14 @@ class Crawler(object):
     def crawl(self):
         for conf in config_lists:
             for url in conf['urls']:
-                resp = Downloader().page_download(url, conf)
+                resp = Downloader().download(url, conf)
                 if resp:
                    proxy_list = PageParser().parse(resp, conf)
-                   # print(proxy_list)
+                   print(proxy_list)
                    print('正在验证代理可以用性')
                    valid_many(proxy_list, 'spider')
 
 
+# if __name__ == '__main__':
+#     c = Crawler()
+#     c.crawl()
